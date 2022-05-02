@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "_EmployeePartial";
+}
+
+@if (Session["Employee"] == null)
+{
+    <li>@Html.ActionLink("Employee Login", "Employee", "Login")</li>
+}
+else
+{
+    <li>@Html.ActionLink("Dashboard", "Index", "Project")</li>
+}
+

@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "_CoordinatorPartial";
+}
+
+
+@if (Session["Manager"] == null)
+{
+    <li>@Html.ActionLink("Manager Login", "Manager", "Login")</li>
+}
+else
+{
+    <li>@Html.ActionLink("Dashboard", "Index", "Employee")</li>
+    <li>@Html.ActionLink("Projects Info", "Index", "Project")</li>
+    <li>@Html.ActionLink("Employee Projects", "Index", "EmployeeProject")</li>
+
+}
+
